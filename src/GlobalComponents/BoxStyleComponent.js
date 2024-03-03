@@ -1,9 +1,10 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react'; // replace 'some-library' with the actual library you're using
 
-const BoxStyleComponent = ({children, w, h, marginTop, marginBottom ,alignItems}) => {
+const BoxStyleComponent = ({children, w, h, marginTop, marginBottom ,alignItems, aspectRatio}) => {
     return (
         <Box
+            aspectRatio={aspectRatio}
             posiion='relative'
             overflow={'scroll'}
             bg='#DAE6F2'
