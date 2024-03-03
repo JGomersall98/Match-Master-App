@@ -1,5 +1,5 @@
 // SliderSettings.js
-import { NextArrow, PrevArrow } from '../CustomArrowComponent';
+import { NextArrow, PrevArrow } from './CustomArrowComponent';
 
 // Export a function that takes a flag indicating whether players are loaded
 export const SliderSettings = (arePlayersLoaded) => ({

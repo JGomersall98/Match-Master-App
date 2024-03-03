@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ButtonComponent } from './ButtonComponent';
+import { ButtonComponent } from '../../../GlobalComponents/ButtonComponent';
 import { HiRefresh } from "react-icons/hi";
-import { updateDatabase } from './services/./updateDatabaseHook';
+import { updateDatabase } from '../../../Webhooks/updateDatabaseHook';
 import { useToast } from '@chakra-ui/react';
 
 export function UpdateDatabaseButton() {

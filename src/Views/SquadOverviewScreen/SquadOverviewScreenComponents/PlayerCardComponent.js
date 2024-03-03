@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Image, Text, VStack, HStack } from '@chakra-ui/react';
 import '@fontsource-variable/inter';
-import { ButtonComponent } from './ButtonComponent';
+import { ButtonComponent } from '../../../GlobalComponents/ButtonComponent';
 
 const PlayerCard = ({ player, cardHeight }) => {
   return (

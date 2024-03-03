@@ -1,10 +1,10 @@
 // MainScreen.js
 import React from 'react';
 import { Text, Box } from '@chakra-ui/react';
-import { UpdateDatabaseButton } from '../UpdateDatabaseButton';
-import { ButtonComponent } from '../ButtonComponent';
-import { BackgroundFlexComponent } from '../BackgroundFlexComponent';
-import { MatchMasterText } from '../MatchMasterTextComponent';
+import { UpdateDatabaseButton } from './MainScreenComponents/UpdateDatabaseButton';
+import { ButtonComponent } from '../../GlobalComponents/ButtonComponent';
+import { BackgroundFlexComponent } from '../../GlobalComponents/BackgroundFlexComponent';
+import { MatchMasterText } from '../../GlobalComponents/MatchMasterTextComponent';
 import { RiTeamFill } from "react-icons/ri";
 import '@fontsource-variable/inter';
 import { useNavigate } from 'react-router-dom';
