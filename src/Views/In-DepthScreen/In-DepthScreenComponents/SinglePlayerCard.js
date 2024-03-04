@@ -20,14 +20,14 @@ const SinglePlayerCard = ({ playerData }) => {
 
       <HStack spacing={7}>
 
-        <Box bg='#DAE6F2' borderRadius={20} borderWidth={2} borderColor='white' aspectRatio={1} height='10vh' marginTop={1} display="flex" alignItems="center" justifyContent="center">
+        <Box bg='#DAE6F2' borderRadius={20} borderWidth={2} borderColor='white' aspectRatio={1} height='12vh' marginTop={1} display="flex" alignItems="center" justifyContent="center">
           <VStack>
             <Text color={playerData.playerRating.textColor} fontFamily='Inter Variable' fontWeight='bold' fontSize='2vw'>{playerData.playerRating.playerRating}</Text>
             <Text fontFamily='Inter Variable' color='black' fontSize='1vw'>Rating</Text>
           </VStack>
         </Box>
 
-        <Box bg='#DAE6F2' borderRadius={20} borderWidth={2} borderColor='white' aspectRatio={1} height='10vh' marginTop={1} display="flex" alignItems="center" justifyContent="center">
+        <Box bg='#DAE6F2' borderRadius={20} borderWidth={2} borderColor='white' aspectRatio={1} height='12vh' marginTop={1} display="flex" alignItems="center" justifyContent="center">
           <VStack>
             <Text fontFamily='Inter Variable' fontWeight='bold' fontSize='2vw' color={playerData.adaptabilityPercentage.textColor}>{playerData.adaptabilityPercentage.adaptabilityPercentage}%</Text>
             <Text fontFamily='Inter Variable' color='black' fontSize='1vw'>Adaptability</Text>
