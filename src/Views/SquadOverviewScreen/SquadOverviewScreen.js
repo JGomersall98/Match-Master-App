@@ -7,9 +7,11 @@ import { BoxStyleComponent } from '../../GlobalComponents/BoxStyleComponent';
 import {ScreenTitleComponent} from '../../GlobalComponents/ScreenTitleComponent';
 import {HomeScreenButton} from '../../GlobalComponents/HomeScreenButtonComponent';
 import { FetchPlayersByPosition } from '../../Webhooks/SquadOverviewHook';
-import { PlayerCard} from './SquadOverviewScreenComponents/PlayerCardComponent';
+import { FetchPlayerCard } from '../../Webhooks/PlayerCardHook';
+import { PlayerCard } from './SquadOverviewScreenComponents/PlayerCardComponent';
 import React, { useState } from 'react';
 import {SliderSettings} from './SquadOverviewScreenComponents/SliderSettings';
+import { MatchMasterTopLeft } from '../../GlobalComponents/MatchMasterTopLeftTextComponent';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -44,13 +46,22 @@ function SquadOverviewScreen() {
 
     const cardWidth = (92 / SliderSettings.slidesToShow) + 'vw';
     
+    const handleViewMetrics = async (playerId) => {
+      // Call the webhook to get the in-depth metrics
+      try {
+        const playerCardData = await FetchPlayerCard(playerId);
+        // Navigate to InDepthScreen with the playerCardData as state
+        navigate('/in-depth', { state: { playerCardData } });
+      } catch (error) {
+        console.error('Error fetching player card:', error);
+      }
+    };
     
     return (
         <BackgroundFlexComponent position="relative">
 
-        <Box position="absolute" top="0" left="0" paddingLeft={'2vw'} paddingTop={'2vw'}>
-            <MatchMasterText fontSize="2vw" />
-        </Box>
+
+        <MatchMasterTopLeft/>
 
         <ScreenTitleComponent text="Squad Overview"></ScreenTitleComponent>
             
@@ -66,7 +77,7 @@ function SquadOverviewScreen() {
           {players.length > 0 ? (
             <Slider {...sliderSettings}>
               {players.map((player) => (
-                <PlayerCard key={player.playerId} player={player} cardHeight="55vh"/>
+                <PlayerCard key={player.playerId} player={player} cardHeight="55vh" onViewMetrics={handleViewMetrics}/>
               ))}
             </Slider>
           ) : (

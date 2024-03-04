@@ -2,9 +2,11 @@
 import React from 'react';
 import { Flex } from '@chakra-ui/react';
 
-const BackgroundFlexComponent = ({ children, ...props }) => {
+const BackgroundFlexComponent = ({ children, paddingLeft, paddingRight,  ...props }) => {
   return (
     <Flex
+      paddingLeft={paddingLeft}
+      paddingRight={paddingRight}
       direction="column"
       align="center"
       justify="top"
