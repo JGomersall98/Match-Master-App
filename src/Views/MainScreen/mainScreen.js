@@ -39,4 +39,4 @@ function MainScreen() {
   );
 }
 
-export default MainScreen;
+export {MainScreen};
