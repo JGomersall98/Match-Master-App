@@ -6,7 +6,8 @@
   "scripts": {
     "react-start": "BROWSER=none react-scripts start",
     "electron-delay": "sleep 2 && electron .",
-    "start": "concurrently \"npm run react-start\" \"npm run electron-delay\""
+    "start": "concurrently \"npm run react-start\" \"npm run electron-delay\"",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "MIT",
