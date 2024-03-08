@@ -11,9 +11,9 @@ export function UpdateDatabaseButton() {
   const handleUpdateDatabase = async () => {
     setIsLoading(true); // Start loading animation
 
-    // Create a promise that rejects in 30 seconds
+    // Create a promise that rejects in 120 seconds
     const timeoutPromise = new Promise((resolve, reject) => {
-      setTimeout(() => reject(new Error('Request timed out. Please check your connection.')), 30000);
+      setTimeout(() => reject(new Error('Request timed out. Please check your connection.')), 120000);
     });
 
     try {
